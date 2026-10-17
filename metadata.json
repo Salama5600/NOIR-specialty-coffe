@@ -1,0 +1,6 @@
+{
+  "name": "NOIR Specialty Coffee | Artisanal Roastery & Lounge",
+  "description": "Luxury specialty coffee roastery and lounge featuring interactive table bookings, flavor matrix digital menu, beans shop, and atmospheric experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

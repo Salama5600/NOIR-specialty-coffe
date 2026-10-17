@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #FAF7F2;
+    --surface-card: #FFFFFF;
+    --surface-muted: #F3ECE2;
+    --accent-caramel: #B57438;
+    --accent-caramel-hover: #9E6028;
+    --accent-caramel-light: #F7EFE6;
+    --accent-sage: #4E6E56;
+    --text-primary: #1A1816;
+    --text-secondary: #4A453F;
+    --text-muted: #7A736A;
+    --border-light: #EBE4DA;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar - Modern Soft */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD5CA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B57438;
+}
+
+/* Light Glassmorphism */
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(235, 228, 218, 0.85);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(235, 228, 218, 0.6);
+}
+
+/* Warm Caramel Glow Hover */
+.caramel-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.caramel-glow-hover:hover {
+  box-shadow: 0 14px 34px -8px rgba(181, 116, 56, 0.16);
+  transform: translateY(-2px);
+  border-color: rgba(181, 116, 56, 0.4);
+}
+.caramel-glow-hover:active {
+  transform: scale(0.98);
+  transition-duration: 150ms;
+}
+
+/* Soft Warm Gradients */
+.caramel-gradient-bg {
+  background: linear-gradient(135deg, #C98748 0%, #B57438 50%, #945B25 100%);
+}
+
+.caramel-text-gradient {
+  background: linear-gradient(135deg, #965A22 0%, #B57438 50%, #D49052 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Clean Sunlit Vignette */
+.light-vignette {
+  background: radial-gradient(circle at center, transparent 55%, rgba(250, 247, 242, 0.6) 100%);
+}
+
+/* Radar polygon animations */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
